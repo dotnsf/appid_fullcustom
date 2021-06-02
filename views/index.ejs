@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<script type="text/javascript" src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="apple-mobile-web-app-title" content="App ID Custom UI"/>
+<title>App ID Custom UI</title>
+<script>
+</script>
+<style type="text/css">
+</style> 
+</head>
+<body>
+
+<div class="container">
+  <div>
+    <a class="btn btn-warning" href="/appid/logout">Logout</a>
+  </div>
+
+  <% if( user && user.name ){ %>
+  <h2><%= user.name %></h2>
+  <% }else{ %>
+  <h2>(App ID)</h2>
+  <% } %>
+</div>
+
+</body>
+</html>

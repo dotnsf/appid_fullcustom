@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<script type="text/javascript" src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
+<link href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="apple-mobile-web-app-title" content="App ID Custom UI"/>
+<title>App ID Custom UI - Sign-up</title>
+
+<style type="text/css">
+</style> 
+
+<script>
+</script>
+
+</head>
+<body>
+
+<div class="container">
+  <h2>サインアップ</h2>
+
+  <% if( message ){ %>
+    <div class="alert alert-danger">
+    <%= message %>
+    </div>
+  <% } %>
+
+  <form action="/appid/signup?language=ja" method="post" data-toggle="validator">
+    <div class="form-group">
+        <label class="whiteText">姓</label>
+        <input type="text" class="form-control" name="lastName" value=""/>
+    </div>
+    <div class="form-group">
+        <label class="whiteText">名</label>
+        <input type="text" class="form-control" name="firstName" value=""/>
+    </div>
+    <div class="form-group">
+        <label class="whiteText">電話番号</label>
+        <input type="text" class="form-control" name="phoneNumber" value=""/>
+    </div>
+    <div class="form-group">
+        <label class="whiteText">メールアドレス</label>
+        <input type="text" class="form-control" name="email" value="" required/>
+    </div>
+    <div class="form-group">
+        <label class="whiteText">パスワード</label>
+        <input type="password" class="form-control" name="password" required/>
+    </div>
+    <div class="form-group">
+        <label class="whiteText">パスワード（再入力）</label>
+        <input type="password" class="form-control" name="confirmed_password" required/>
+    </div>
+
+    <input type="hidden" name="language" value="ja"/>
+    <button type="submit" class="btn btn-lg btn-primary center-block">サインアップ</button>
+  </form>
+</div>
+
+</body>
+</html>
